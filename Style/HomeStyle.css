@@ -1,0 +1,715 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap');
+
+body{
+  margin: 0;
+background-color: var(--primary-color);}
+/*Barra Menu*/
+/* custom scroll bar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+::selection{
+  background: rgb(0,123,255,0.3);
+}
+.content{
+  padding: 0 30px;
+}
+.navbar{
+  position: fixed;
+  width: 100%;
+  height: 70px;
+  padding: 25px 0;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.navbar.sticky{
+  background: var(--primary-color);
+  padding: 10px 0;
+  padding-top: 0;
+  box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.1);
+}
+.navbar .content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo
+{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.navbar .logo a{
+  color: var(--secondary-color);
+  font-size: 30px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.navbar .menu-list{
+  display: inline-flex;
+}
+.menu-list
+{
+  align-items: center;
+}
+.menu-list li{
+  list-style: none;
+}
+.menu-list i, .icon-menu-btn
+{
+  color: var(--secondary-color);
+}
+.menu-list li a{
+  color: var(--secondary-color);
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 25px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.menu-list li a:hover{
+  color: #007bff;
+}
+.banner{
+  background: url("banner.jpg") no-repeat;
+  right: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.about{
+  padding: 30px 0;
+}
+.about .title{
+  font-size: 38px;
+  font-weight: 700;
+}
+.about p{
+  padding-top: 20px;
+  text-align: justify;
+}
+.icon{
+  color: var(--secondary-color);
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+}
+#icon
+{
+  position: fixed;
+  bottom: 15px;
+  right: 70px;
+  width: 25px;
+  height: 25px;
+}
+.menu-list .cancel-btn{
+  position: absolute;
+  right: 30px;
+  top: 20px;
+}
+@media (max-width: 1230px) {
+  .content{
+    padding: 0 60px;
+  }
+}
+@media (max-width: 1100px) {
+  .content{
+    padding: 0 40px;
+  }
+}
+@media (max-width: 900px) {
+  .content{
+    padding: 0 30px;
+  }
+}
+@media (max-width: 868px) {
+  body.disabled{
+    overflow: hidden;
+  }
+  .icon{
+    display: block;
+  }
+  .icon.hide{
+    display: none;
+  }
+  .navbar .menu-list{
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    max-width: 400px;
+    left: -100%;
+    top: 0px;
+    display: block;
+    padding: 40px 0;
+    text-align: center;
+    background: var(--primary-color);
+    transition: all 0.3s ease;
+  }
+  .navbar.show .menu-list{
+    left: 0%;
+  }
+  .navbar .menu-list li{
+    margin-top: 45px;
+  }
+  .navbar .menu-list li a{
+    font-size: 23px;
+    margin-left: -100%;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  .navbar.show .menu-list li a{
+    margin-left: 0px;
+  }
+}
+@media (max-width: 380px) {
+  .navbar .logo a{
+    font-size: 27px;
+  }
+}
+  /*Dark Mode*/
+#icon
+{
+  cursor: pointer;
+  z-index: 10000;
+}
+:root 
+{
+  --primary-color: #FDFFFD;
+  --secondary-color: #000;
+}
+.dark-theme
+{
+  --primary-color: #201A31;
+  --secondary-color: #fff;
+}
+/*DarkMode Button*/
+/*Prefabs Mobile*/
+*{font-family: "poppins";}
+h1 /*Background titles*/
+{
+  color: #fff;
+  font-size: 35px;
+  max-width: 800px;
+}
+h5 /*White text*/
+{
+  color: #fff;
+  font-weight: 200;
+  font-size: 15px;
+}
+p /*Black text*/
+{
+  color: var(--secondary-color);
+  font-weight: 300;
+  font-size: 15px;
+}
+h3 /*White Titles*/
+{
+  color: #fff;
+  font-size: 22px;
+}
+h2/*Black Titles*/
+{
+  color: var(--secondary-color);
+  font-size: 22px;
+}
+.boton /*Button design*/
+{
+  background-color: #4461F2;
+  color: #fff;
+
+  width: 150px;
+  height: 50px;
+
+  border: 0;
+  border-radius: 10px;
+
+  font-weight: 800;
+}
+#mail-direction
+{
+  text-decoration: none;
+  color: #fff;
+}
+/*Textbox Prefab Mobile*/
+
+.Text-box p, .Text-box h5, .Text-box h3, .Text-box h2
+{
+  max-width: 500px;
+}
+.Text-box
+{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 25% 5%;
+  margin-bottom: 5%;
+}
+.Text-box img
+{
+  padding-top: 50px;
+  width: 80%;
+  height: 80%;
+}
+/*Finish prefab Mobile*/
+/*Prefab Desktop*/
+@media (min-width: 720px)
+{
+  .Text-box img
+  {
+    max-width: 600px;
+    max-height: 600px;
+  }
+  h1 /* Desktop Background titles*/
+  {
+    font-size: 48px;
+  }
+  h5 /*White text*/
+  {
+    font-size: 20px;
+  }
+  p /*Black text*/
+  {
+    font-size: 18px;
+  }
+  h3 /*White Titles*/
+  {
+    font-size: 27px;
+  }
+  h2/*Black Titles*/
+  {
+    font-size: 27px;
+  }
+}
+ 
+/*Back Ground mobile*/
+.BackGround
+{
+  background-image: url(../Fotos/Home-BackGround.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 120vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+.BackGround-titles
+{
+  padding-top: 13%;
+}
+/*Que es satolution mobile*/
+
+.Que-es
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  padding: 5% 10%;
+  padding-bottom: 30%;
+}
+
+.Que-es p
+{
+  max-width: 500px;
+}
+
+/*Box mobile */
+.boxes-container
+{
+  background-image: url(../Fotos/Home-boxes-background.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 50px;
+  padding-bottom: 300px;
+}
+.boxes
+{
+  display: flex;
+  flex-direction: row;
+
+  justify-content: center;
+
+  height: 350px;
+}
+.box /*Dentro de las cajas*/
+{
+  padding: 50px 0;
+  padding-top: 10px;
+  background-color: #20411a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 65%;
+  border-radius: 10px;
+}
+.box h5
+{
+  padding: 0 10%;
+  text-align: center  ;
+  font-size: 17px;
+}
+#secondarybox
+{
+  display: none;
+}
+/*Box mobile img*/
+.box img
+{
+  width: 95%;
+}
+.boxes-titles /*Boxes titles el resto esta junto a Que-es*/
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  padding: 5% 10%;
+}
+.boxes-titles h5, .boxes-titles h3
+{
+  max-width: 800px;
+}
+/*Datos*/
+.datos
+{
+  margin: 0;
+}
+.deteccion-humo
+{
+  background-image: url(../Fotos/Home-humedad.webp);
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.dispositivos{background-image: url(../Fotos/Home-Dispositivos.webp); 
+  height: 150px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;}
+.ciudados
+{
+  background-image: url(../Fotos/Home-TusPlantas.webp); 
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/*Datos utiles*/
+.Datos-utiles
+{
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  text-align: center;
+}
+.Datos-utiles h2
+{
+  font-size: 35px;
+}
+.Datos-utiles p
+{
+  font-size: 18px;
+  font-weight: bold;
+  width: 95%;
+}
+.Datos-utiles img
+{
+  margin: 50px 0;
+  margin-bottom:200px;
+  width: 60%;
+  height: 60%;
+}
+.Datos-utiles-info i, .Datos-utiles-info svg
+{
+ color: #389389;
+}
+/*Que argentina mobile*/
+.Que-argentina
+{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-image: url(../Fotos/Home-QueArgentina.webp);
+  padding: 10%;
+  padding-bottom: 100px;
+}
+.Que-argentina-img img
+{
+  width:100%;
+}
+/*Empeza ya Mobile*/
+.Empeza-ya
+{
+  background-image: url(../Fotos/Home-EmpezaYa.webp);
+  text-align: center;
+  padding: 50px;
+}
+.Empeza-ya-titles
+{
+  display: flex;
+  flex-direction: column;
+}
+.Empeza-ya h3
+{
+  font-size: 28px;
+}
+.Empeza-ya h4
+{
+    font-size: 27px;
+    margin: 0;
+    color: #4461F2;
+    margin-bottom: 50px;
+}
+/*Footer mobile */
+
+footer
+{
+  background-color: #2d2c2c;;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  height: 200px;
+}
+footer a{
+  margin: 0 10px;
+}
+footer h5, footer h6
+{
+  margin: 0;
+  color: #fff;
+}
+footer img
+{
+  height: 35px;
+  width: 35px;
+}
+@media (min-width: 720px)
+{
+  #text
+  {
+  font-size: 10em;
+  }
+  /*Desktop Prefabs*/
+  .Text-box
+  {
+    display: flex;
+    flex-direction: row;
+    padding: 5% 5%;
+  }
+  .Text-box img
+  {
+    width: 500px;
+  }
+  .Text-titles
+  {
+    display: flex;
+    flex-direction: column;
+    margin: 25px 50px;
+  }
+  .Que-es
+  {
+    padding-bottom: 10%;
+  }
+  #secondarybox
+  {
+    display: flex;
+  }
+  .box
+  {
+    margin: 0 5%;
+    height: 80%;
+    border-radius: 10px;
+  }
+  /*Datos utiles Mobile*/
+  .Datos-utiles
+  {
+    flex-direction: row;
+    text-align: right;
+    justify-content: space-between;
+    padding:  5% 10%;
+  }
+  .Datos-utiles img
+  {
+    height: 40%;
+    width: 40%;
+  }
+  /*Prevenir Desktop*/
+  #Preevenir
+  {
+    margin-top: 0;
+
+    background-image: url(../Fotos/Home-Separador.png);
+    background-repeat: repeat-x;
+  }
+  #Preevenir h2
+  {
+    margin-top: 50px;
+  }
+  /*Que hacemos para ayudar desktop*/
+  #Ayudar
+  {
+    flex-direction: row-reverse;
+  }
+  .Que-argentina
+  {
+    align-items: left;
+    text-align: left;
+    padding: 10%;
+  }
+  .Que-argentina h5
+  {
+    width: 50%;
+  }
+  .Que-argentina-img img 
+  {
+    height: 600px;
+  }
+  /*Emepza Ya desktop*/
+  .Empeza-ya
+  {
+    display: flex;
+    flex-direction: column;
+  }
+  .Empeza-ya-titles
+  {
+    flex-direction: column;
+  }
+  .Empeza-ya h3
+  {
+    font-size: 50px;
+    margin: 0;
+  }
+  .Empeza-ya h4
+  {
+    font-size: 50px;
+  }
+  .Empeza-ya h5
+  {
+    font-size: 20px;
+    margin: 0;
+    margin-bottom: 50px;
+    padding: 0 25%;
+  }
+}
+
+/*User*/
+.sesion
+{
+  margin-left: 10px;
+}
+.content .menu-list .sesion{
+  position: relative;
+}
+.sesion .menu{
+  top: 220px;
+  left: 50px;
+  justify-content: center;
+  background-color:var(--primary-color);
+  box-sizing:0 5px 25px rgba(0,0,0,0.1);
+  border-radius: 15px;
+  padding: 5px 20px 10px 20px;
+  width: 250px;
+  height: 300px;
+  transition: 0.5s;
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+}
+.sesion .menu.active{
+  opacity: 1;
+  visibility: visible;
+}
+.profile.active
+{
+  background-image: url(../Fotos/Profile-icon2.webp);
+  background-size: 60px;
+  background-repeat: no-repeat;
+}
+.profile img.active
+{
+  visibility: hidden;
+} 
+.profile.desactive
+{
+  background-color: "";
+}
+.profile img
+{
+  width: 50px;
+  height: 50px;
+}
+.sesion .menu.desactive
+{
+  opacity: 0;
+  visibility: hidden;
+}
+.sesion .menu h3{
+  color: var(--secondary-color);
+  font-size: 16px;
+  font-weight: 600;
+  text-align: left;
+  text-align: center;
+}
+.sesion .menu h6
+{
+  color: var(--secondary-color);
+  font-size: 12px;
+  text-align: center;
+}
+.sesion .menu a{
+  color: var(--secondary-color);
+  font-size: 14px;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  padding: 10px 0;
+  
+  border-top: 1px solid #EAF0F7;
+
+}
+#Cerrar
+{
+  margin-top: 0;
+  background-color: #4461F2;
+  text-align: center;
+  color: #fff;
+  border-radius: 10px;
+}
+.sesion .menu a:hover {
+  color:#216968;
+}
+/*User Desktop*/
+@media (min-width: 720px)
+{
+  
+  .sesion .menu
+  {
+    top: 100px;
+    left: auto;
+    right: 30px;
+  }
+  #Cerrar
+  {
+    margin-top: 20%;
+  }
+}

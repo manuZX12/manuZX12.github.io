@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Satolution|Nosotros</title>
+    <script src='Us.js'></script>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='Style/Us.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
+    <script>
+        (function(d){
+           var s = d.createElement("script");
+           /*position*/
+           s.setAttribute("data-position", 3);
+           /*size (values: small, large)*/
+           s.setAttribute("data-size", "small");
+           /*default language (e.g., fr, de, es, he, nl, etc.)*/
+           s.setAttribute("data-language", "es");
+           /*color (e.g., #053f67)*/
+           s.setAttribute("data-color", "#fff");
+           /*override type (1=person, 2=chair, 3=eye, 4=text)*/
+           s.setAttribute("data-type", "1");
+           /* s.setAttribute("data-statement_text:", "Our Accessibility Statement");*/
+           /* s.setAttribute("data-statement_url", "http://www.example.com/accessibility";*/
+           /*support on mobile devices*/
+           s.setAttribute("data-mobile", true);
+           /* uncomment the following line to set custom trigger action for accessibility menu*/
+           /* s.setAttribute("data-trigger", "triggerId")*/
+           s.setAttribute("data-account", "Kzwh8zrdzV");
+           s.setAttribute("src", "https://cdn.userway.org/widget.js");
+           (d.body || d.head).appendChild(s);})(document)
+   </script>
+</head>
+<script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+<header>
+    <nav class="navbar">
+      <div class="content">
+        <div class="logo">
+          <a href="index.html"><img src="Fotos/Logo44.webp" alt="Logo"></a>
+          </div>
+        <ul class="menu-list">
+          <div class="icon cancel-btn">
+            <i class="fas fa-times"onclick="menuToggle();"></i>
+          </div>
+          <li><a href="#">Mapa</a></li>
+          <li><a href="Us.html">Nosotros</a></li>
+          <li id="Login-Sesion"><a href="Login.html">Iniciar Sesión</a></li>
+          <li id="Register-Sesion"><a href="Register.html">Registrarse</a></li>
+          <div id="Sesion" class="sesion">
+              <div class="menu">
+                  <h3>Profile</h3>
+                  <h6 id="Changing-Account">User</h6>
+                  <a href="RecoverPassword.html">Cambiar Contraseña</a>
+                  <a href="mailto:satolution@outlook.com?Subject=Me%20Contacto%20para">Ayuda</a>
+                  <a id="Cerrar"href="" onclick="SessionToggle();">Cerrar Sesion</a>    
+              </div>
+              <div class="profile" onclick="menuToggle();">
+                  <img src="Fotos/Home-profile.webp">
+              </div>        
+          </div>
+          
+        </ul>
+        <div class="icon menu-btn">
+          <i class="fas fa-bars"onclick="menuToggle();"></i>
+      </div>
+      </div>
+    </nav>
+    <script>
+      const body = document.querySelector("body");
+      const navbar = document.querySelector(".navbar");
+      const menuBtn = document.querySelector(".menu-btn");
+      const cancelBtn = document.querySelector(".cancel-btn");
+      menuBtn.onclick = ()=>{
+        navbar.classList.add("show");
+        menuBtn.classList.add("hide");
+        body.classList.add("disabled");
+      }
+      cancelBtn.onclick = ()=>{
+        body.classList.remove("disabled");
+        navbar.classList.remove("show");
+        menuBtn.classList.remove("hide");
+      }
+      window.onscroll = ()=>{
+        this.scrollY > 50 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+      }
+    </script>
+      </header>
+<body>
+    <div class="Container">
+        <img src="Fotos/moon-icon.webp" alt="Dark-Mode" id="icon">
+        <div class="Home">
+            
+        </div>
+        <div class="SobreNo">
+            <div class="SobreNo-titles">
+            <h1>Un poco sobre nosotros</h1>
+            <p>Somos un grupo de cuatro estudiantes de ORT que al principio no teníamos muy en claro que queríamos hacer, hasta que nos surgió una idea bastante distintiva. En un principio, mencionar un proyecto que involucre satélites era una imaginación, pero entre charlas y personas metidas en este tema nos dimos cuenta que alcanzar este sueño iba a ser complicado pero realizable. Después de investigar, hablar con expertos en el tema e indagar más allá, pudimos llegar a una idea, pero se vio frustrada por diversos factores.
+                A pesar de esto, no dejamos esta posibilidad ahí tirada y nos pusimos a pensar en otra idea. Así fue como surgió Solution, un proyecto capaz de ayudar a miles de personas y un desafío para nuestros conocimientos como principiantes en este campo de estudio.
+                </p>
+            </div>
+            <img src="Fotos/Nosotros-SobreNosotros.webp" alt="">
+        </div>
+    </div>
+</body>
+</html>
+
+<!--Profile-->
+<script>
+    function menuToggle(){
+        const toggleMenu = document.querySelector('.menu');
+        toggleMenu.classList.toggle('active')       
+    }
+</script>
+<script>
+    var icon = document.getElementById("icon");
+
+    icon.onclick = function()
+    {
+        document.body.classList.toggle("dark-theme")
+        if(document.body.classList.contains("dark-theme")){
+            icon.src = "Fotos/sun-icon.webp"
+        }
+        else
+        {
+            icon.src = "Fotos/moon-icon.webp"
+        }
+    }
+
+</script>
+<!--Profile-->
+<script>
+    function menuToggle(){
+        const toggleMenu = document.querySelector('.menu');
+        const togglePorfile = document.querySelector(".profile")
+        const togglePicture = document.querySelector(".profile img")
+        
+        toggleMenu.classList.toggle('active')
+        togglePorfile.classList.toggle("active")
+        togglePicture.classList.toggle("active")
+    }
+</script>
+
+<script>
+            var profile = document.querySelector(".profile")
+
+    if(screen.width > 1080)
+    {
+        profile.style.display = ""
+    }
+    else 
+    {
+        display.style.display = "none"
+    }
+</script>
+<script>
+    var Login = document.querySelector('#Login-Sesion')
+    var Register = document.querySelector('#Register-Sesion')
+    var buttonClosesession = document.querySelector('#Cerrar')
+
+</script>
