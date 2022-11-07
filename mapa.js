@@ -8,18 +8,13 @@ const checkAuth = async ()=> {
         return resp.json()
         
     }).then((data)=>{
-        document.getElementById("bienvenidoUser").innerText = "Bienvenid@ a  Satolution " + data.email
         document.getElementById("Changing-Account").innerText = data.email
-        console.log(data)
         if (data.email == data.email){
             Login.style.display = "none"
             Register.style.display = "none"
         }
     })
-
-    
 }
-checkAuth()
 const SessionToggle = ()=> {
     fetch("http://localhost:3001/logout", {
         credentials: "include",
@@ -28,12 +23,3 @@ const SessionToggle = ()=> {
     window.location.reload()
 }
 checkAuth()
-
-const campos = async ()=> {
-    const res = await fetch("http://localhost:3001/get-campos", {
-        credentials: "include",
-    })
-    let data = await res.json()
-    console.log(data)
-}
-campos()
